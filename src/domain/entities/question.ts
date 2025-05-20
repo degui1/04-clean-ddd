@@ -1,13 +1,25 @@
-import { randomUUID } from "node:crypto"
+import { Slug } from './value-objects/slug'
+import { Entity } from "../../core/entity"
+import { UniqueEntityID } from '../../core/unique-entity-id'
+import { Optional } from '../../core/types/optional'
 
-export class Question {
-  public id: string
-  public title: string
-  public content: string
+interface QuestionProps {
+  authorId: UniqueEntityID
+  bestAnswerId?: UniqueEntityID
+  title: string
+  content: string
+  slug: Slug
+  createdAt: Date
+  updatedAt?: Date
+}
 
-  constructor(title: string, content: string, id?: string) {
-    this.title = title
-    this.content = content
-    this.id = id ?? randomUUID()
+export class Question extends Entity<QuestionProps> {
+  static create(props: Optional<QuestionProps, 'createdAt'>, id?: UniqueEntityID) {
+    const question = new Question({
+      ...props,
+      createdAt: new Date(),
+    }, id)
+
+    return question
   }
 }
