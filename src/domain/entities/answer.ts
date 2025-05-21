@@ -1,6 +1,6 @@
-import { Entity } from "../../core/entity"
-import { Optional } from "../../core/types/optional"
-import { UniqueEntityID } from "../../core/unique-entity-id"
+import { Entity } from "@/core/entity"
+import { Optional } from "@/core/types/optional"
+import { UniqueEntityID } from "@/core/unique-entity-id"
 
 interface AnswerProps {
   authorId: UniqueEntityID
