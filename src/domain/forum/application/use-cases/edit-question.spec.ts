@@ -1,4 +1,4 @@
-import { UniqueEntityID } from '@/core/unique-entity-id'
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { makeQuestion } from 'test/factories/make-questions'
 import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
 

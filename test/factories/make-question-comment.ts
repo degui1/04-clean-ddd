@@ -4,7 +4,7 @@ import {
   QuestionComment,
   QuestionCommentProps,
 } from '@/domain/forum/enterprise/entities/question-comment'
-import { UniqueEntityID } from '@/core/unique-entity-id'
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 
 export function makeQuestionComment(
   override: Partial<QuestionCommentProps> = {},
