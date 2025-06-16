@@ -3,7 +3,7 @@ import { makeAnswer } from 'test/factories/make-answers'
 import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
 
 import { EditAnswerUseCase } from './edit-answer'
-import { NotAllowedError } from './errors/not-allowed-error'
+import { NotAllowedError } from '@/core/errors/errors/not-allowed-error'
 import { InMemoryAnswerAttachmentsRepository } from 'test/repositories/in-memory-answer-attachments-repository'
 import { makeAnswerAttachment } from 'test/factories/make-answer-attachment'
 
